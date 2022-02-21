@@ -104,7 +104,7 @@ public class main {
                 }
                 else if(answer == 79)
                 {
-                    System.out.println("Congrats");
+                    System.out.println("Congratulations, you managed to understand that the sequence is based on prime numbers!");
                     return;
                 }
                 else if(answer == 0)
@@ -115,17 +115,173 @@ public class main {
             }
             catch (Exception e)
             {
-                System.out.println("Not a number");
+                System.out.println("Wrong answer");
             }
             input = myObj.nextLine();
         }
 
     }
 
+    public static void firstSequence()
+    {
+        int answer = 1;
+        Scanner myObj = new Scanner(System.in);
+
+
+        System.out.println("9 11  7 15  -1  31  ? \n" +
+                "What number should be next in the sequence? (Write 0 if you want to give up)");
+        String input = myObj.nextLine();
+
+        while(answer != -33)
+        {
+            try
+            {
+                answer = Integer.parseInt(input);
+
+                if(answer != -33 && answer != 0)
+                {
+                    System.out.println("Wrong answer");
+                }
+                else if(answer == -33)
+                {
+                    System.out.println("Congratulations!");
+                    return;
+                }
+                else if(answer == 0)
+                {
+                    return;
+                }
+
+            }
+            catch (Exception e)
+            {
+                System.out.println("Wrong answer");
+            }
+            input = myObj.nextLine();
+        }
+    }
+
+    public static void thirdSequence()
+    {
+        int answer = 1;
+        Scanner myObj = new Scanner(System.in);
+
+
+        System.out.println("37 44 36 42 38 46 37 ? \n" +
+                "What number should be next in the sequence? (Write 0 if you want to give up)");
+        String input = myObj.nextLine();
+
+        while(answer != 38)
+        {
+            try
+            {
+                answer = Integer.parseInt(input);
+
+                if(answer != 38 && answer != 0)
+                {
+                    System.out.println("Wrong answer");
+                }
+                else if(answer == 38)
+                {
+                    System.out.println("Congratulations!");
+                    return;
+                }
+                else if(answer == 0)
+                {
+                    return;
+                }
+
+            }
+            catch (Exception e)
+            {
+                System.out.println("Wrong answer");
+            }
+            input = myObj.nextLine();
+        }
+    }
+
+    public static void fourthSequence()
+    {
+        int answer = 1;
+        Scanner myObj = new Scanner(System.in);
+
+
+        System.out.println("1 2 5 11 21 36 57 85 ? \n" +
+                "What number should be next in the sequence? (Write 0 if you want to give up)");
+        String input = myObj.nextLine();
+
+        while(answer != 121)
+        {
+            try
+            {
+                answer = Integer.parseInt(input);
+
+                if(answer != 121 && answer != 0)
+                {
+                    System.out.println("Wrong answer");
+                }
+                else if(answer == 121)
+                {
+                    System.out.println("Congratulations!");
+                    return;
+                }
+                else if(answer == 0)
+                {
+                    return;
+                }
+
+            }
+            catch (Exception e)
+            {
+                System.out.println("Wrong answer");
+            }
+            input = myObj.nextLine();
+        }
+    }
+
+    public static void fifthSequence()
+    {
+        int answer = 1;
+        Scanner myObj = new Scanner(System.in);
+
+
+        System.out.println("9 14  25  42  65 ? \n" +
+                "What number should be next in the sequence? (Write 0 if you want to give up)");
+        String input = myObj.nextLine();
+
+        while(answer != 94)
+        {
+            try
+            {
+                answer = Integer.parseInt(input);
+
+                if(answer != 94 && answer != 0)
+                {
+                    System.out.println("Wrong answer");
+                }
+                else if(answer == 94)
+                {
+                    System.out.println("Congratulations!");
+                    return;
+                }
+                else if(answer == 0)
+                {
+                    return;
+                }
+
+            }
+            catch (Exception e)
+            {
+                System.out.println("Wrong answer");
+            }
+            input = myObj.nextLine();
+        }
+    }
+
     public static void main(String[] args) {
 
-
-       // System.exit(0);
+        fifthSequence();
+        System.exit(0);
         LocalTime time = LocalTime.now();
         int localHour;
         localHour = time.getHour();
@@ -312,7 +468,7 @@ public class main {
             }
             else if(op == 2)
             {
-                primeNumbersSequence();
+                firstSequence();
             }
             else if(op == 0)
             {

@@ -8,7 +8,7 @@ public class main {
 
 
         String name;
-        String name2;
+        String name2 = "";
         String surname;
 
         String y_n;
@@ -52,5 +52,81 @@ public class main {
             anger++;
         }
 
+        System.out.println("Do you have second name? [y/n]");
+        y_n = myObj.nextLine();
+
+        anger = 0;
+
+        while((y_n.length()) != 1 && (!y_n.equals("y")) && (!y_n.equals("n")))
+        {
+            if(anger == 0)
+            {
+                System.out.println("Please enter an 'y' or 'n' ");
+                y_n = myObj.nextLine();
+            }
+            else if(anger == 1)
+            {
+                System.out.println("I am asking you to enter an 'y' or 'n' ");
+                y_n = myObj.nextLine();
+            }
+            else if(anger == 2)
+            {
+                System.out.println("Im not joking, enter an 'y' or 'n' ");
+                y_n = myObj.nextLine();
+            }
+            else if(anger == 3)
+            {
+                System.out.println("For the last time Im asking you to enter an 'y' or 'n' ");
+                y_n = myObj.nextLine();
+            }
+            else if(anger == 4)
+            {
+                System.out.println("Charlie has left the chat...");
+                System.exit(0);
+            }
+
+            anger++;
+        }
+
+        anger = 0;
+        if(y_n.equals("y"))
+        {
+            System.out.println("What is your second name?");
+            name2 = myObj.nextLine();
+
+            while(!onlyLetters(name2))
+            {
+                if(anger == 0)
+                {
+                    System.out.println("Please enter a proper second name ");
+                    name2 = myObj.nextLine();
+                }
+                else if(anger == 1)
+                {
+                    System.out.println("I am asking you to enter a second proper name ");
+                    name2 = myObj.nextLine();
+                }
+                else if(anger == 2)
+                {
+                    System.out.println("Im not joking, enter a proper second name ");
+                    name2 = myObj.nextLine();
+                }
+                else if(anger == 3)
+                {
+                    System.out.println("For the last time Im asking you to enter a proper second name ");
+                    name2 = myObj.nextLine();
+                }
+                else if(anger == 4)
+                {
+                    System.out.println("Charlie has left the chat...");
+                    System.exit(0);
+                }
+                anger++;
+            }
+
+
+        }
+        name = name + " " + name2;
+        System.out.println(name);
     }
 }

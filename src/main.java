@@ -82,7 +82,7 @@ public class main {
         }
     }
 
-    public static void primeNumbersSequence() //maybe include fibonacci?
+    public static void primeNumbersSequence()
     {
         int answer = 1;
         Scanner myObj = new Scanner(System.in);
@@ -304,8 +304,6 @@ public class main {
 
     public static void main(String[] args) {
 
-
-       // System.exit(0);
         LocalTime time = LocalTime.now();
         int localHour;
         localHour = time.getHour();

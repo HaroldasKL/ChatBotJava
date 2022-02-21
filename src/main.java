@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.*;
 public class main {
     public static boolean onlyLetters(String name) {
         return name.matches("[a-zA-Z]+");
@@ -6,7 +7,9 @@ public class main {
 
     public static void main(String[] args) {
 
-
+        LocalTime time = LocalTime.now();
+        int localHour;
+        localHour = time.getHour();
         String name;
         String name2 = "";
         String surname;
@@ -123,6 +126,7 @@ public class main {
                 }
                 anger++;
             }
+            name2 = name2 + " ";
 
 
         }
@@ -160,6 +164,19 @@ public class main {
             }
             anger++;
         }
-        System.out.println(name + surname);
+
+
+        if(localHour >= 6 && localHour <= 10)
+        {
+            System.out.println("Good morning " + name + surname);
+        }
+        else if (localHour > 10 && localHour < 18)
+        {
+            System.out.println("Good afternoon " + name + surname);
+        }
+        else
+        {
+            System.out.println("Good evening " + name + surname);
+        }
     }
 }

@@ -446,7 +446,7 @@ public class main {
             }
             else if(anger == 2)
             {
-                System.out.println("Im not joking, enter a proper ssurname");
+                System.out.println("Im not joking, enter a proper surname");
                 surname = myObj.nextLine();
             }
             else if(anger == 3)

@@ -22,7 +22,7 @@ public class main {
         int random = rand.nextInt(101);
 
         Scanner myObj = new Scanner(System.in);
-        System.out.println("ATSAKYMAS: " + random);
+        //System.out.println("Answer: " + random); //If you want to find out the answer
         while(guess != random || computerGuess != random)
         {
             if(!didIGuess)
@@ -278,10 +278,34 @@ public class main {
         }
     }
 
+    public static void randomSequence() {
+        Random rand = new Random();
+        int random = 1 + rand.nextInt(5);
+
+        switch(random)
+        {
+            case 1:
+                firstSequence();
+                break;
+            case 2:
+                primeNumbersSequence();
+                break;
+            case 3:
+                thirdSequence();
+                break;
+            case 4:
+                fourthSequence();
+                break;
+            case 5:
+                fifthSequence();
+                break;
+        }
+    }
+
     public static void main(String[] args) {
 
-        fifthSequence();
-        System.exit(0);
+
+       // System.exit(0);
         LocalTime time = LocalTime.now();
         int localHour;
         localHour = time.getHour();
@@ -468,7 +492,7 @@ public class main {
             }
             else if(op == 2)
             {
-                firstSequence();
+                randomSequence();
             }
             else if(op == 0)
             {

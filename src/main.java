@@ -127,6 +127,39 @@ public class main {
 
         }
         name = name + " " + name2;
-        System.out.println(name);
+
+        System.out.println("And what is your surname?");
+        surname = myObj.nextLine();
+        anger = 0;
+        while(!onlyLetters(surname))
+        {
+            if(anger == 0)
+            {
+                System.out.println("Please enter a proper surname");
+                surname = myObj.nextLine();
+            }
+            else if(anger == 1)
+            {
+                System.out.println("I am asking you to enter a proper surname ");
+                surname = myObj.nextLine();
+            }
+            else if(anger == 2)
+            {
+                System.out.println("Im not joking, enter a proper ssurname");
+                surname = myObj.nextLine();
+            }
+            else if(anger == 3)
+            {
+                System.out.println("For the last time Im asking you to enter a proper surname");
+                surname = myObj.nextLine();
+            }
+            else if(anger == 4)
+            {
+                System.out.println("Charlie has left the chat...");
+                System.exit(0);
+            }
+            anger++;
+        }
+        System.out.println(name + surname);
     }
 }

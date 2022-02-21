@@ -82,8 +82,50 @@ public class main {
         }
     }
 
+    public static void primeNumbersSequence() //maybe include fibonacci?
+    {
+        int answer = 1;
+        Scanner myObj = new Scanner(System.in);
+
+
+        System.out.println("7  8 11 18  31  50 ? \n" +
+                "What number should be next in the sequence? (Write 0 if you want to give up)");
+        String input = myObj.nextLine();
+
+        while(answer != 79)
+        {
+            try
+            {
+                answer = Integer.parseInt(input);
+
+                if(answer != 79 && answer != 0)
+                {
+                    System.out.println("Wrong answer");
+                }
+                else if(answer == 79)
+                {
+                    System.out.println("Congrats");
+                    return;
+                }
+                else if(answer == 0)
+                {
+                    return;
+                }
+
+            }
+            catch (Exception e)
+            {
+                System.out.println("Not a number");
+            }
+            input = myObj.nextLine();
+        }
+
+    }
+
     public static void main(String[] args) {
 
+
+       // System.exit(0);
         LocalTime time = LocalTime.now();
         int localHour;
         localHour = time.getHour();
@@ -270,10 +312,11 @@ public class main {
             }
             else if(op == 2)
             {
-//                randomSequence();
+                primeNumbersSequence();
             }
             else if(op == 0)
             {
+                myObj.close();
                 System.out.println("Goodbye!");
             }
         }

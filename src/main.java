@@ -357,7 +357,7 @@ public class main {
 
         anger = 0;
 
-        while((y_n.length()) != 1 && (!y_n.equals("y")) && (!y_n.equals("n")))
+        while(!y_n.equals("y") && (!y_n.equals("n")))
         {
             if(anger == 0)
             {
